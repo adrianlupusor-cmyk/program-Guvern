@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ro" data-lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priorități economice pentru viitorul Guvern | Expert-Grup</title>
+<meta name="description" content="Infografic interactiv: prioritățile de politici economice pentru viitorul Guvern al Republicii Moldova, în baza analizelor Expert-Grup.">
+<style>
+:root{
+  --red:#C21A33;
+  --red-dark:#9E1128;
+  --red-tint:#FAEDEF;
+  --ink:#3B3A3D;
+  --ink-2:#67656B;
+  --bg:#F6F5F3;
+  --card:#FFFFFF;
+  --line:#E7E4E1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+html[data-lang="en"] .ro{display:none !important}
+html[data-lang="ro"] .en{display:none !important}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+.topbar{height:6px;background:linear-gradient(90deg,var(--red) 0%,var(--red-dark) 60%,var(--ink) 100%)}
+
+/* ---------- header ---------- */
+header.site{background:var(--card);border-bottom:1px solid var(--line)}
+.site-in{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:13px;text-decoration:none}
+.logo img{height:52px;width:auto;display:block}
+.logo-name{display:block;font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--red);line-height:1.05;white-space:nowrap}
+.logo-sub{display:block;font-size:11.5px;font-weight:600;letter-spacing:.2px;color:var(--ink)}
+.lang{display:flex;border:1.5px solid var(--line);border-radius:99px;overflow:hidden;background:var(--bg)}
+.lang button{
+  border:0;background:transparent;padding:8px 18px;font:inherit;font-size:13.5px;font-weight:700;
+  color:var(--ink-2);cursor:pointer;transition:.2s;
+}
+.lang button.on{background:var(--red);color:#fff}
+.lang button:not(.on):hover{color:var(--red)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--card);padding:44px 0 46px;border-bottom:1px solid var(--line)}
+.kicker{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--red);border:1.5px solid var(--red);border-radius:99px;padding:5px 14px;margin-bottom:18px}
+h1{font-size:clamp(30px,4.6vw,46px);line-height:1.12;letter-spacing:-.8px;font-weight:800;max-width:840px}
+h1 em{font-style:normal;color:var(--red)}
+.hero-sub{margin-top:14px;font-size:clamp(16px,2vw,19px);color:var(--ink-2);max-width:760px}
+.hero-lead{margin-top:20px;font-size:15.5px;max-width:820px;color:var(--ink);border-left:4px solid var(--red);padding-left:16px}
+.hero-meta{margin-top:22px;font-size:13px;color:var(--ink-2);display:flex;gap:18px;flex-wrap:wrap}
+.hero-meta b{color:var(--ink)}
+
+.pub-head{margin-top:24px;font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-2)}
+.pub-list{margin:10px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:7px 26px;max-width:880px;counter-reset:pub}
+.pub-list li{position:relative;padding-left:26px;font-size:12.8px;color:var(--ink-2);counter-increment:pub;line-height:1.45}
+.pub-list li::before{content:counter(pub);position:absolute;left:0;top:1px;width:17px;height:17px;border-radius:5px;background:var(--red);color:#fff;font-size:10.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.pub-list b{color:var(--ink);font-weight:700}
+
+/* ---------- sections ---------- */
+section{padding:52px 0}
+.sec-head{margin-bottom:26px}
+.sec-num{font-size:13px;font-weight:800;color:var(--red);letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(23px,3vw,31px);letter-spacing:-.5px;font-weight:800;margin-top:4px}
+.sec-note{color:var(--ink-2);margin-top:8px;max-width:740px;font-size:15px}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px 18px;position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red)}
+.stat-num{font-size:clamp(30px,3.4vw,40px);font-weight:800;color:var(--red);letter-spacing:-1px;line-height:1}
+.stat-num small{font-size:.55em;font-weight:800}
+.stat-txt{margin-top:9px;font-size:13.5px;color:var(--ink);line-height:1.45}
+.causes{margin-top:22px;background:var(--ink);color:#fff;border-radius:14px;padding:20px 22px;display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.causes-label{font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#F1B7C1;flex:none;padding-top:2px}
+.causes-txt{font-size:14.5px;flex:1;min-width:260px}
+
+/* ---------- model shift ---------- */
+.shift{display:grid;grid-template-columns:1fr 54px 1fr;gap:12px;align-items:stretch}
+.model{border-radius:16px;padding:26px 24px}
+.model h3{font-size:17px;font-weight:800;margin-bottom:4px}
+.model .m-tag{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;opacity:.75;margin-bottom:14px}
+.model ul{list-style:none}
+.model li{padding:7px 0 7px 24px;position:relative;font-size:14px;border-top:1px dashed rgba(0,0,0,.14)}
+.model li:first-child{border-top:0}
+.model-old{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.model-old li::before{content:"×";position:absolute;left:2px;top:6px;font-weight:800;color:var(--ink-2)}
+.model-new{background:linear-gradient(160deg,var(--red) 0%,var(--red-dark) 100%);color:#fff}
+.model-new li{border-top-color:rgba(255,255,255,.25)}
+.model-new li::before{content:"✓";position:absolute;left:0;top:7px;font-weight:800;color:#fff}
+.shift-arrow{display:flex;align-items:center;justify-content:center}
+.shift-arrow svg{width:40px;height:40px}
+.shift-note{margin-top:16px;font-size:13.5px;color:var(--ink-2);text-align:center}
+
+/* ---------- pillars / accordion ---------- */
+.pillars-tools{display:flex;justify-content:flex-end;margin-bottom:14px}
+.btn-ghost{border:1.5px solid var(--line);background:var(--card);border-radius:99px;padding:8px 16px;font:inherit;font-size:13px;font-weight:700;color:var(--ink-2);cursor:pointer;transition:.2s}
+.btn-ghost:hover{border-color:var(--red);color:var(--red)}
+.acc-item{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:box-shadow .25s}
+.acc-item.open{box-shadow:0 10px 30px rgba(59,58,61,.10);border-color:#D8D5D2}
+.acc-head{width:100%;display:flex;align-items:center;gap:16px;padding:20px 22px;background:transparent;border:0;cursor:pointer;text-align:left;font:inherit}
+.p-num{flex:none;width:46px;height:46px;border-radius:12px;background:var(--red-tint);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:800}
+.acc-item.open .p-num{background:var(--red);color:#fff}
+.p-titles{flex:1;min-width:0}
+.p-title{font-size:clamp(15.5px,2vw,18.5px);font-weight:800;letter-spacing:-.2px}
+.p-tag{font-size:12.5px;color:var(--red);font-weight:700;margin-top:2px}
+html[data-lang="ro"] .p-tag::before{content:"Problema · ";font-weight:800;letter-spacing:.4px;text-transform:uppercase;font-size:10.5px}
+html[data-lang="en"] .p-tag::before{content:"The problem · ";font-weight:800;letter-spacing:.4px;text-transform:uppercase;font-size:10.5px}
+.chev{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.3s;color:var(--ink-2)}
+.acc-item.open .chev{transform:rotate(180deg);border-color:var(--red);color:var(--red)}
+.acc-panel{max-height:0;overflow:hidden;transition:max-height .5s ease}
+.acc-body{padding:2px 22px 24px 84px}
+.p-lead{font-size:14.5px;color:var(--ink);background:var(--red-tint);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.p-lead b{color:var(--red-dark)}
+.measures{list-style:none;margin-bottom:16px}
+.measures li{position:relative;padding:9px 0 9px 30px;font-size:14px;border-top:1px solid var(--line)}
+.measures li:first-child{border-top:0}
+.measures li::before{content:"";position:absolute;left:4px;top:16px;width:12px;height:12px;border-radius:3px;background:var(--red);transform:rotate(45deg) scale(.72)}
+.impact{display:flex;align-items:flex-start;gap:10px;background:var(--ink);color:#fff;border-radius:12px;padding:13px 16px;font-size:13.5px}
+.impact-label{flex:none;font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#F1B7C1;padding-top:2px}
+
+/* chart */
+.chart{margin:6px 0 16px;border:1px solid var(--line);border-radius:12px;padding:18px 18px 12px;background:#FCFBFA}
+.chart h4{font-size:13.5px;font-weight:800;margin-bottom:12px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 48px;align-items:center;gap:10px;margin-bottom:7px;font-size:12.5px}
+.bar-row .b-name{color:var(--ink-2);font-weight:600;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{height:15px;background:#EFECE9;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:99px;background:#B9B6BB;transition:width 1.1s cubic-bezier(.2,.7,.3,1)}
+.bar-row.hl .b-name{color:var(--red);font-weight:800}
+.bar-row.hl .bar i{background:var(--red)}
+.bar-row .b-val{font-weight:700;color:var(--ink)}
+.bar-row.hl .b-val{color:var(--red)}
+.chart-src{font-size:11.5px;color:var(--ink-2);margin-top:10px}
+
+/* funds table */
+.ftable{width:100%;border-collapse:collapse;margin:6px 0 16px;font-size:13.5px;background:#FCFBFA;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ftable th{background:var(--ink);color:#fff;text-align:left;padding:10px 14px;font-size:12px;letter-spacing:.6px;text-transform:uppercase;font-weight:700}
+.ftable td{padding:10px 14px;border-top:1px solid var(--line)}
+.ftable tr.hl td{background:var(--red-tint);color:var(--red-dark);font-weight:800}
+.ftable td:first-child{font-weight:700}
+
+/* ---------- governance strip ---------- */
+.gov{background:var(--ink);color:#fff;border-radius:18px;padding:30px 30px;display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap}
+.gov-icon{flex:none;width:52px;height:52px;border-radius:14px;background:var(--red);display:flex;align-items:center;justify-content:center}
+.gov-icon svg{width:28px;height:28px}
+.gov-body{flex:1;min-width:280px}
+.gov h3{font-size:19px;font-weight:800;margin-bottom:8px}
+.gov p{font-size:14.5px;color:#DDD9DC}
+
+/* ---------- results ---------- */
+.results{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.res{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--red);border-radius:14px;padding:18px 16px}
+.res b{display:block;font-size:15.5px;letter-spacing:-.2px;color:var(--red-dark);margin-bottom:7px;line-height:1.25}
+.res span{font-size:12.8px;color:var(--ink-2);line-height:1.45;display:block}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#CFCBCE;margin-top:30px}
+.foot-in{padding:42px 0 30px;display:grid;grid-template-columns:1.05fr 1.6fr;gap:40px}
+.foot-logo{margin-bottom:14px}
+.foot-logo-plate{display:inline-block;background:#fff;border-radius:10px;padding:10px 14px;line-height:0}
+.foot-logo-plate img{height:36px;width:auto;display:block}
+.foot-logo svg{width:44px;height:46px}
+.foot-logo .logo-name{color:#fff;font-size:21px}
+.foot-logo .logo-sub{color:#B7B3B6}
+.foot-about{font-size:13px;line-height:1.6;color:#B7B3B6}
+.foot-src h4{color:#fff;font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:12px}
+.foot-src ol{margin-left:18px}
+.foot-src li{font-size:13px;margin-bottom:8px;line-height:1.5}
+.foot-src li b{color:#fff;font-weight:700}
+.foot-src li a{color:#fff;text-decoration:underline}
+.foot-bottom{border-top:1px solid #504E52;padding:16px 0 20px;font-size:12.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:#B7B3B6}
+.foot-bottom a{color:#fff;text-decoration:none;font-weight:700}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .results{grid-template-columns:repeat(2,1fr)}
+  .shift{grid-template-columns:1fr}
+  .pub-list{grid-template-columns:1fr}
+  .shift-arrow svg{transform:rotate(90deg)}
+  .acc-body{padding-left:22px}
+  .foot-in{grid-template-columns:1fr}
+}
+@media (max-width:540px){
+  .stats{grid-template-columns:1fr}
+  .results{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:104px 1fr 44px}
+}
+
+/* ---------- print ---------- */
+@media print{
+  body{background:#fff}
+  .lang,.pillars-tools,.chev{display:none !important}
+  .acc-panel{max-height:none !important}
+  .reveal{opacity:1 !important;transform:none !important}
+  .bar i{transition:none}
+  section{padding:26px 0;break-inside:avoid-page}
+  .acc-item{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="site">
+  <div class="wrap site-in">
+    <a class="logo" href="https://www.expert-grup.org" target="_blank" rel="noopener" aria-label="Expert-Grup">
+      <img id="eg-logo" src="data:image/jpeg;base64,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" alt="Expert-Grup — Centru Analitic Independent">
+    </a>
+    <div class="lang" role="group" aria-label="Limbă / Language">
+      <button type="button" id="btn-ro" class="on" onclick="setLang('ro')">Română</button>
+      <button type="button" id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker"><span class="ro">Infografic · Politici economice</span><span class="en" lang="en">Infographic · Economic policy</span></span>
+    <h1>
+      <span class="ro">Priorități economice pentru <em>viitorul Guvern</em></span>
+      <span class="en" lang="en">Economic priorities for <em>the next Government</em></span>
+    </h1>
+    <p class="hero-sub">
+      <span class="ro">Șapte direcții de acțiune pentru relansarea creșterii economice, fundamentate pe datele și analizele Expert-Grup</span>
+      <span class="en" lang="en">Seven policy directions to restart economic growth, grounded in Expert-Grup data and analysis</span>
+    </p>
+    <p class="hero-lead">
+      <span class="ro">Creșterea de 2,4% din 2025 nu compensează stagnarea din anii precedenți, iar modelul de creștere bazat pe costul redus al forței de muncă și-a epuizat potențialul. Acest infografic sintetizează prioritățile de politici pentru viitorul Guvern, în baza publicațiilor și instrumentelor de monitorizare recente ale Expert-Grup privind finanțele publice, investițiile, piața de capital, administrația locală, comerțul extern, piața muncii și proprietatea publică.</span>
+      <span class="en" lang="en">The 2.4% growth of 2025 does not make up for the stagnation of the preceding years, and the growth model built on cheap labour has run its course. This infographic distils the policy priorities for the next Government, based on recent Expert-Grup publications and monitoring tools covering public finances, investment, capital markets, local government, trade, the labour market and public property.</span>
+    </p>
+<div class="pub-head"><span class="ro">Cele cinci publicații pe care se bazează infograficul</span><span class="en" lang="en">The five publications behind this infographic</span></div>
+    <ol class="pub-list">
+      <li><span class="ro"><b>Moldova trebuie să înceapă o amplă reformă de consolidare fiscală</b> · analiză, mai 2026</span><span class="en" lang="en"><b>Moldova must begin a broad fiscal consolidation reform</b> · analysis, May 2026</span></li>
+      <li><span class="ro"><b>Reforma teritorial-administrativă și descentralizarea fiscală</b> · comentariu economic, 2026</span><span class="en" lang="en"><b>Territorial-administrative reform and fiscal decentralisation</b> · economic commentary, 2026</span></li>
+      <li><span class="ro"><b>Fondurile de investiții – o precondiție pentru accelerarea creșterii economice</b> · comentariu economic, mai 2025</span><span class="en" lang="en"><b>Investment funds: a precondition for faster economic growth</b> · economic commentary, May 2025</span></li>
+      <li><span class="ro"><b>Tranziția spre un model de creștere bazat pe valoare adăugată sporită</b> · notă de poziție</span><span class="en" lang="en"><b>The transition to a growth model based on higher value added</b> · position note</span></li>
+      <li><span class="ro"><b>Raport de Stare a Țării 2025</b> · noiembrie 2025</span><span class="en" lang="en"><b>State of the Country Report 2025</b> · November 2025</span></li>
+    </ol>
+    <div class="hero-meta">
+      <span><span class="ro"><b>Iulie 2026</b> · Chișinău</span><span class="en" lang="en"><b>July 2026</b> · Chișinău</span></span>
+      <span><span class="ro">Sursă: publicații Expert-Grup (2024–2026)</span><span class="en" lang="en">Source: Expert-Grup publications (2024–2026)</span></span>
+    </div>
+  </div>
+</div>
+<!-- ================= 1. STARTING POINT ================= -->
+<section id="context">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-num"><span class="ro">01 · Diagnostic</span><span class="en" lang="en">01 · Diagnosis</span></div>
+      <h2><span class="ro">Punctul de pornire</span><span class="en" lang="en">The starting point</span></h2>
+      <p class="sec-note">
+        <span class="ro">Înainte de soluții, cifrele. Șase indicatori care arată că avem nevoie de o nouă abordare în domeniul politicilor economice.</span>
+        <span class="en" lang="en">Before the solutions, the numbers: six indicators showing why economic policy needs a new approach.</span>
+      </p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="stat-num"><span class="count" data-val="40" data-dec="0">40</span><small>%</small></div>
+        <p class="stat-txt"><span class="ro">rata de ocupare a populației — cea mai scăzută din Europa</span><span class="en" lang="en">the employment rate — the lowest in Europe</span></p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num"><span class="ro"><span class="count" data-val="2.2" data-dec="1" data-sep=",">2,2</span><small>%</small></span><span class="en" lang="en"><span class="count" data-val="2.2" data-dec="1" data-sep=".">2.2</span><small>%</small></span></div>
+        <p class="stat-txt"><span class="ro">creșterea medie anuală în 2014–2023, la jumătate față de cea din 2004–2013 (4,6%)</span><span class="en" lang="en">average annual growth in 2014–2023, half the 4.6% recorded in 2004–2013</span></p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num"><span class="ro"><span class="count" data-val="33.6" data-dec="1" data-sep=",">33,6</span><small>%</small></span><span class="en" lang="en"><span class="count" data-val="33.6" data-dec="1" data-sep=".">33.6</span><small>%</small></span></div>
+        <p class="stat-txt"><span class="ro">rata sărăciei absolute în 2024, în creștere cu 2 p.p. față de anul precedent</span><span class="en" lang="en">absolute poverty rate in 2024, up 2 p.p. on the previous year</span></p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">4–5<small>%</small></div>
+        <p class="stat-txt"><span class="ro">din PIB — deficitul bugetar din ultimii ani, preponderent structural, dublu față de nivelul sustenabil</span><span class="en" lang="en">of GDP — the budget deficit of recent years, mostly structural and twice the sustainable level</span></p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num"><span class="count" data-val="29" data-dec="0">29</span><small>%</small></div>
+        <p class="stat-txt"><span class="ro">ponderea creditului bancar în PIB (2025), printre cele mai mici din regiune</span><span class="en" lang="en">bank credit to GDP (2025), among the lowest in the region</span></p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">1 : 3</div>
+        <p class="stat-txt"><span class="ro">raportul export–import la bunuri: la fiecare euro exportat revin trei euro importați — consecința unor exporturi dominate de materie primă și produse cu valoare adăugată scăzută</span><span class="en" lang="en">goods exports to imports: three euros come in for every euro exported — the result of exports dominated by raw materials and low value-added products</span></p>
+      </div>
+    </div>
+    <div class="causes reveal">
+      <span class="causes-label"><span class="ro">Cauzele de fond</span><span class="en" lang="en">Root causes</span></span>
+      <p class="causes-txt">
+        <span class="ro">Moldova produce și exportă preponderent bunuri și servicii cu valoare adăugată scăzută, ceea ce menține joase atât veniturile private — salariile —, cât și cele publice — impozitele colectate la buget. Peste acest handicap se suprapun trei factori structurali: (i) declinul demografic și emigrarea populației apte de muncă; (ii) deficitul de investiții, atât publice, cât și private; (iii) guvernanța slabă, care subminează eficiența programelor de stat și absorbția fondurilor destinate investițiilor.</span>
+        <span class="en" lang="en">Moldova mostly produces and exports goods and services with low value added, which keeps both private incomes — wages — and public revenues — taxes — low. On top of this handicap sit three structural factors: (i) demographic decline and the emigration of working-age people; (ii) under-investment, both public and private; (iii) weak governance, which blunts state support programmes and slows the absorption of investment funding.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. MODEL SHIFT ================= -->
+<section id="model" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-num"><span class="ro">02 · Direcția strategică</span><span class="en" lang="en">02 · Strategic direction</span></div>
+      <h2><span class="ro">Schimbarea paradigmei economice: de la muncă ieftină la valoare adăugată</span><span class="en" lang="en">The economic paradigm shift: from cheap labour to higher value added</span></h2>
+      <p class="sec-note">
+        <span class="ro">Vechiul model a produs bunăstare scăzută și dezechilibre persistente. Tranziția spre valoare adăugată și productivitate este condiția convergenței cu economia UE.</span>
+        <span class="en" lang="en">The old model delivered low living standards and persistent imbalances. Shifting to value added and productivity is the condition for converging with the EU economy.</span>
+      </p>
+    </div>
+    <div class="shift">
+      <div class="model model-old reveal">
+        <div class="m-tag"><span class="ro">Modelul vechi</span><span class="en" lang="en">The old model</span></div>
+        <h3><span class="ro">Competitivitate prin costuri</span><span class="en" lang="en">Competing on costs</span></h3>
+        <ul>
+          <li><span class="ro">Forță de muncă ieftină și export de materie primă</span><span class="en" lang="en">Cheap labour and raw-material exports</span></li>
+          <li><span class="ro">Consum alimentat de remiteri, nu de productivitate</span><span class="en" lang="en">Consumption fuelled by remittances, not productivity</span></li>
+          <li><span class="ro">Deficite persistente: comercial, de cont curent, bugetar</span><span class="en" lang="en">Persistent deficits: trade, current account, budget</span></li>
+          <li><span class="ro">Complexitate tehnologică redusă a producției</span><span class="en" lang="en">Low technological complexity of output</span></li>
+        </ul>
+      </div>
+      <div class="shift-arrow reveal" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M6 20h26m0 0-9-9m9 9-9 9" stroke="#C21A33" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="model model-new reveal">
+        <div class="m-tag"><span class="ro">Modelul nou</span><span class="en" lang="en">The new model</span></div>
+        <h3><span class="ro">Competitivitate prin valoare adăugată</span><span class="en" lang="en">Competing on value added</span></h3>
+        <ul>
+          <li><span class="ro">Procesarea materiei prime locale și branduri autohtone</span><span class="en" lang="en">Local processing and home-grown brands</span></li>
+          <li><span class="ro">Automatizare și tehnologizare în toate sectoarele</span><span class="en" lang="en">Automation and technology across all sectors</span></li>
+          <li><span class="ro">Investiții publice și private în capital fizic și uman</span><span class="en" lang="en">Public and private investment in physical and human capital</span></li>
+          <li><span class="ro">Productivitatea ca sursă a salariilor mai mari</span><span class="en" lang="en">Productivity as the source of higher wages</span></li>
+        </ul>
+      </div>
+    </div>
+<p class="shift-note reveal">
+      <span class="ro">Nota de poziție Expert-Grup fixează cinci obiective strategice pentru această tranziție — eficientizarea suportului de stat pentru antreprenori, dezvoltarea pieței de capital, diminuarea deficitului comercial, creșterea volumului și eficienței investițiilor publice, precum și creșterea mobilității și calificărilor forței de muncă. Cele șapte priorități de mai jos le transpun în agenda viitorului Guvern.</span>
+      <span class="en" lang="en">The Expert-Grup position note sets five strategic objectives for this transition: more effective state support for entrepreneurs, capital market development, a smaller trade deficit, larger and more efficient public investment, and a more mobile, better-skilled workforce. The seven priorities below translate them into the next Government's agenda.</span>
+    </p>
+  </div>
+</section>
+<!-- ================= 3. SIX PRIORITIES ================= -->
+<section id="prioritati">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-num"><span class="ro">03 · Agenda de politici</span><span class="en" lang="en">03 · Policy agenda</span></div>
+      <h2><span class="ro">Șapte priorități pentru relansarea economică</span><span class="en" lang="en">Seven priorities to restart growth</span></h2>
+      <p class="sec-note">
+        <span class="ro">Textul roșu din dreptul fiecărei priorități descrie problema abordată — situația actuală. Apăsați pe fiecare prioritate pentru diagnostic, măsuri concrete și efectul așteptat.</span>
+        <span class="en" lang="en">The red text under each priority states the problem being addressed — the status quo. Click each priority for the diagnosis, the concrete measures and the expected effect.</span>
+      </p>
+    </div>
+    <div class="pillars-tools">
+      <button type="button" class="btn-ghost" id="btn-all" onclick="toggleAll()"><span class="ro" id="lbl-all-ro">Deschide toate</span><span class="en" lang="en" id="lbl-all-en">Expand all</span></button>
+    </div>
+
+    <!-- P1 -->
+    <div class="acc-item reveal">
+      <button type="button" class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+        <span class="p-num">1</span>
+        <span class="p-titles">
+          <span class="p-title"><span class="ro">Consolidare fiscală prin lărgirea bazei impozabile</span><span class="en" lang="en">Fiscal consolidation by broadening the tax base</span></span>
+          <span class="p-tag"><span class="ro">Deficit bugetar de 4–5% din PIB, dublu față de nivelul sustenabil</span><span class="en" lang="en">A budget deficit of 4–5% of GDP, twice the sustainable level</span></span>
+        </span>
+        <span class="chev" aria-hidden="true"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5 6 6.5 11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-body">
+          <p class="p-lead">
+            <span class="ro"><b>Problema nu sunt cheltuielile publice, ci veniturile.</b> Cota efectivă a TVA este de circa 10%, la jumătate față de cota standard de 20%, iar peste 30 de miliarde MDL nu ajung anual la buget din cauza cotelor reduse și scutirilor. Deficitul finanțat intern la dobânzi de 9–10% concurează băncile cu sectorul privat și scumpește creditul pentru firme.</span>
+            <span class="en" lang="en"><b>The problem is not public spending; it is revenue.</b> The effective VAT rate is around 10%, half the standard 20%, and over MDL 30 billion a year never reaches the budget because of reduced rates and exemptions. A deficit financed domestically at 9–10% interest puts the state in competition with firms for bank credit and makes borrowing dearer for business.</span>
+          </p>
+          <div class="chart">
+            <h4><span class="ro">Cheltuieli publice, % din PIB — media ultimilor 15 ani</span><span class="en" lang="en">Public spending, % of GDP — 15-year average</span></h4>
+            <div class="bar-row"><span class="b-name"><span class="ro">Ungaria</span><span class="en" lang="en">Hungary</span></span><span class="bar"><i data-w="98"></i></span><span class="b-val"><span class="ro">49,0</span><span class="en" lang="en">49.0</span></span></div>
+            <div class="bar-row"><span class="b-name"><span class="ro">Croația</span><span class="en" lang="en">Croatia</span></span><span class="bar"><i data-w="93.8"></i></span><span class="b-val"><span class="ro">46,9</span><span class="en" lang="en">46.9</span></span></div>
+            <div class="bar-row"><span class="b-name"><span class="ro">Polonia</span><span class="en" lang="en">Poland</span></span><span class="bar"><i data-w="87.4"></i></span><span class="b-val"><span class="ro">43,7</span><span class="en" lang="en">43.7</span></span></div>
+            <div class="bar-row"><span class="b-name">Estonia</span><span class="bar"><i data-w="81.2"></i></span><span class="b-val"><span class="ro">40,6</span><span class="en" lang="en">40.6</span></span></div>
+            <div class="bar-row"><span class="b-name"><span class="ro">Letonia</span><span class="en" lang="en">Latvia</span></span><span class="bar"><i data-w="79"></i></span><span class="b-val"><span class="ro">39,5</span><span class="en" lang="en">39.5</span></span></div>
+            <div class="bar-row"><span class="b-name">Bulgaria</span><span class="bar"><i data-w="76.8"></i></span><span class="b-val"><span class="ro">38,4</span><span class="en" lang="en">38.4</span></span></div>
+            <div class="bar-row"><span class="b-name"><span class="ro">România</span><span class="en" lang="en">Romania</span></span><span class="bar"><i data-w="75.4"></i></span><span class="b-val"><span class="ro">37,7</span><span class="en" lang="en">37.7</span></span></div>
+            <div class="bar-row"><span class="b-name"><span class="ro">Lituania</span><span class="en" lang="en">Lithuania</span></span><span class="bar"><i data-w="73.2"></i></span><span class="b-val"><span class="ro">36,6</span><span class="en" lang="en">36.6</span></span></div>
+            <div class="bar-row hl"><span class="b-name">Moldova</span><span class="bar"><i data-w="71.2"></i></span><span class="b-val"><span class="ro">35,6</span><span class="en" lang="en">35.6</span></span></div>
+            <div class="bar-row"><span class="b-name"><span class="ro">Macedonia de Nord</span><span class="en" lang="en">North Macedonia</span></span><span class="bar"><i data-w="63.6"></i></span><span class="b-val"><span class="ro">31,8</span><span class="en" lang="en">31.8</span></span></div>
+            <div class="bar-row"><span class="b-name">Albania</span><span class="bar"><i data-w="59.4"></i></span><span class="b-val"><span class="ro">29,7</span><span class="en" lang="en">29.7</span></span></div>
+            <p class="chart-src"><span class="ro">Moldova cheltuie mai puțin decât aproape toți comparatorii regionali — dar colectează și mai puțin (33,2% din PIB, media 2020–2025). Sursa: FMI, Banca Mondială, calcule Expert-Grup</span><span class="en" lang="en">Moldova spends less than nearly all regional peers — and collects even less (33.2% of GDP, 2020–2025 average). Source: IMF, World Bank, Expert-Grup calculations</span></p>
+          </div>
+          <ul class="measures">
+            <li><span class="ro">Unificarea cotelor TVA și eliminarea graduală a facilităților și scutirilor, care funcționează ca subvenții opace, în beneficiul disproporționat al consumatorilor cu venituri mari.</span><span class="en" lang="en">Unify VAT rates and phase out exemptions and reduced rates, which act as opaque subsidies that disproportionately benefit higher-income consumers.</span></li>
+            <li><span class="ro">Reducerea decalajului de colectare la TVA, estimat de FMI la 25–30% din potențial, prin combaterea evaziunii fiscale și a economiei informale.</span><span class="en" lang="en">Close the VAT collection gap, estimated by the IMF at 25–30% of potential, by tackling tax evasion and the informal economy.</span></li>
+            <li><span class="ro">Modernizarea Serviciului Fiscal de Stat și verificarea fluxurilor financiare transfrontaliere pentru a detecta transferul abuziv al profiturilor.</span><span class="en" lang="en">Modernise the State Tax Service and screen cross-border financial flows to detect abusive profit shifting.</span></li>
+            <li><span class="ro">Reconsiderarea impozitelor pe proprietate, care aduc astăzi sub 1% din veniturile fiscale, față de o medie UE de 4,5%.</span><span class="en" lang="en">Rebuild property taxation, which today yields under 1% of tax revenue, against an EU average of 4.5%.</span></li>
+          </ul>
+          <div class="impact">
+            <span class="impact-label"><span class="ro">Efect așteptat</span><span class="en" lang="en">Expected effect</span></span>
+            <span><span class="ro">Venituri suplimentare de 2–4 p.p. din PIB în 4–5 ani, fără majorări de cote — spațiu fiscal pentru salarii și investiții. Totodată, un stat care se împrumută mai puțin eliberează creditarea: resursele băncilor se reorientează de la finanțarea deficitului spre investițiile private.</span><span class="en" lang="en">Extra revenue of 2–4 p.p. of GDP over 4–5 years, with no rate increases — fiscal space for wages and investment. A state that borrows less also frees up lending: banks' resources shift from financing the deficit to private investment.</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- P2 -->
+    <div class="acc-item reveal">
+      <button type="button" class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+        <span class="p-num">2</span>
+        <span class="p-titles">
+          <span class="p-title"><span class="ro">Investiții publice mai mari și mai bine guvernate</span><span class="en" lang="en">More public investment, better governed</span></span>
+          <span class="p-tag"><span class="ro">3,3% din PIB — sub aproape toți vecinii</span><span class="en" lang="en">3.3% of GDP — below nearly all neighbours</span></span>
+        </span>
+        <span class="chev" aria-hidden="true"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5 6 6.5 11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-body">
+          <p class="p-lead">
+            <span class="ro"><b>Insuficiența investițiilor publice lasă urme cuantificabile.</b> Moldova a alocat investițiilor capitale doar 3,3% din PIB în 2020–2024, printre cele mai mici niveluri din regiune. Decalajul de 0,9 p.p. față de comparatori, menținut timp de 15 ani, ar putea explica un PIB potențial cu 4–7% mai mic decât în scenariul convergenței cu regiunea.</span>
+            <span class="en" lang="en"><b>Insufficient public investment leaves a measurable mark.</b> Moldova devoted just 3.3% of GDP to capital investment in 2020–2024, among the lowest levels in the region. A 0.9 p.p. gap versus peers, sustained for fifteen years, may explain a potential GDP 4–7% below what regional convergence would have delivered.</span>
+          </p>
+          <ul class="measures">
+            <li><span class="ro">Prioritizarea investițiilor capitale în buget: dintre toate cheltuielile publice, acestea au cel mai mare efect de multiplicare asupra creșterii.</span><span class="en" lang="en">Prioritise capital investment in the budget: of all public spending, it carries the strongest growth multiplier.</span></li>
+            <li><span class="ro">Maturizarea portofoliului de proiecte prin studii de fezabilitate și documentație de calitate, astfel încât investițiile să poată demara imediat ce apare finanțarea.</span><span class="en" lang="en">Build a pipeline of mature projects backed by feasibility studies and sound documentation, so investment can start as soon as financing appears.</span></li>
+            <li><span class="ro">Consolidarea guvernanței în gestionarea Fondului rutier și ONDRL, pentru a minimiza clientelismul politic și a maximiza impactul alocărilor bugetare pentru programele de infrastructură.</span><span class="en" lang="en">Stronger governance of the Road Fund and of the National Office for Regional and Local Development (ONDRL), minimising political clientelism and maximising the impact of budget allocations for infrastructure programmes.</span></li>
+            <li><span class="ro">Contracte multianuale pentru obiectele majore de infrastructură.</span><span class="en" lang="en">Multi-annual contracts for major infrastructure projects.</span></li>
+            <li><span class="ro">Profesionalizarea și depolitizarea unităților de implementare a proiectelor.</span><span class="en" lang="en">Professional and depoliticised project implementation units.</span></li>
+            <li><span class="ro">Valorificarea Planului de creștere al UE (1,9 miliarde EUR, 2025–2027) printr-o selecție transparentă și participativă a proiectelor, după bunele practici OECD.</span><span class="en" lang="en">Use the EU Growth Plan (EUR 1.9 billion, 2025–2027) through transparent, participatory project selection, in line with OECD good practice.</span></li>
+          </ul>
+          <div class="impact">
+            <span class="impact-label"><span class="ro">Efect așteptat</span><span class="en" lang="en">Expected effect</span></span>
+            <span><span class="ro">Fiecare punct procentual din PIB investit public, susținut 5–7 ani, adaugă 0,3–0,5 p.p. la creșterea potențială anuală.</span><span class="en" lang="en">Each percentage point of GDP in public investment, sustained over 5–7 years, adds 0.3–0.5 p.p. to annual potential growth.</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- P3 -->
+    <div class="acc-item reveal">
+      <button type="button" class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+        <span class="p-num">3</span>
+        <span class="p-titles">
+          <span class="p-title"><span class="ro">Piață de capital funcțională și fonduri de investiții</span><span class="en" lang="en">A working capital market and investment funds</span></span>
+          <span class="p-tag"><span class="ro">0 fonduri de investiții active astăzi în Moldova</span><span class="en" lang="en">0 active investment funds in Moldova today</span></span>
+        </span>
+        <span class="chev" aria-hidden="true"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5 6 6.5 11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-body">
+          <p class="p-lead">
+            <span class="ro"><b>Un paradox costisitor:</b> sistemul bancar este printre cele mai lichide din regiune, dar resursele „libere” creditează statul la dobânzi de 9–10% în loc să finanțeze investițiile companiilor. Fără investitori instituționali, banii nu se transformă în capital pentru firmele cu potențial de creștere.</span>
+            <span class="en" lang="en"><b>An expensive paradox:</b> the banking system is among the most liquid in the region, yet the idle money lends to the state at 9–10% instead of financing company investment. Without institutional investors, savings never become capital for firms with growth potential.</span>
+          </p>
+          <table class="ftable">
+            <thead><tr>
+              <th><span class="ro">Țara</span><span class="en" lang="en">Country</span></th>
+              <th><span class="ro">Fonduri de investiții</span><span class="en" lang="en">Investment funds</span></th>
+              <th><span class="ro">Active totale</span><span class="en" lang="en">Total assets</span></th>
+              <th><span class="ro">Raportat la creditul bancar</span><span class="en" lang="en">Relative to bank credit</span></th>
+            </tr></thead>
+            <tbody>
+              <tr><td><span class="ro">Polonia</span><span class="en" lang="en">Poland</span></td><td>463</td><td><span class="ro">95,2 mlrd EUR</span><span class="en" lang="en">EUR 95.2 bn</span></td><td>24%</td></tr>
+              <tr><td><span class="ro">România</span><span class="en" lang="en">Romania</span></td><td>246</td><td><span class="ro">9,9 mlrd EUR</span><span class="en" lang="en">EUR 9.9 bn</span></td><td>11%</td></tr>
+              <tr><td><span class="ro">Lituania</span><span class="en" lang="en">Lithuania</span></td><td>200</td><td><span class="ro">4,3 mlrd EUR</span><span class="en" lang="en">EUR 4.3 bn</span></td><td>13%</td></tr>
+              <tr class="hl"><td>Moldova</td><td>0</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+          <ul class="measures">
+            <li><span class="ro">Integrarea accelerată a pieței de capital naționale în piața financiară unică a UE și facilitarea accesului administratorilor de fonduri europeni pe piața locală.</span><span class="en" lang="en">Fast-track the national capital market's integration into the EU single financial market and ease European fund managers' entry into the local market.</span></li>
+            <li><span class="ro">Transformarea FACEM (Fondul pentru antreprenoriat și creștere economică) într-un fond de fonduri, care să finanțeze inclusiv vehicule de private equity și venture capital.</span><span class="en" lang="en">Turn FACEM (the entrepreneurship and growth fund) into a fund of funds, financing private equity and venture capital vehicles among others.</span></li>
+            <li><span class="ro">Canalizarea unei părți din resursele Planului de creștere prin fonduri de investiții și administratori privați, după modelul aplicat de România și alte state UE în planurile lor de redresare.</span><span class="en" lang="en">Channel part of the Growth Plan resources through investment funds and private managers, as Romania and other EU states did under their recovery plans.</span></li>
+            <li><span class="ro">Regim fiscal și valutar stimulativ pentru investițiile în instrumentele pieței de capital, plus extinderea programelor de suport dincolo de creditul bancar (de exemplu, subvenționarea costurilor de emisiune).</span><span class="en" lang="en">A supportive tax and currency regime for capital market investment, plus state support programmes extended beyond bank credit (for instance, subsidising issuance costs).</span></li>
+            <li><span class="ro">Inițierea proceselor de listare a companiilor de stat la bursă, privatizarea companiilor de stat prin intermediul bursei și susținerea companiilor de stat în emisia de obligațiuni corporative.</span><span class="en" lang="en">Start listing state-owned companies on the stock exchange, privatise state companies through the exchange and support them in issuing corporate bonds.</span></li>
+          </ul>
+          <div class="impact">
+            <span class="impact-label"><span class="ro">Efect așteptat</span><span class="en" lang="en">Expected effect</span></span>
+            <span><span class="ro">Capital pe termen lung și management profesionist pentru companiile autohtone, dincolo de granturi și credite bancare.</span><span class="en" lang="en">Long-term capital and professional management for local companies, beyond grants and bank loans.</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- P4 -->
+    <div class="acc-item reveal">
+      <button type="button" class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+        <span class="p-num">4</span>
+        <span class="p-titles">
+          <span class="p-title"><span class="ro">Descentralizare fiscală și primării viabile</span><span class="en" lang="en">Fiscal decentralisation and viable local governments</span></span>
+          <span class="p-tag"><span class="ro">Taxele locale acoperă doar 23% din bugetele primăriilor</span><span class="en" lang="en">Local taxes cover just 23% of municipal budgets</span></span>
+        </span>
+        <span class="chev" aria-hidden="true"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5 6 6.5 11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-body">
+          <p class="p-lead">
+            <span class="ro"><b>Comasarea singură nu rezolvă problema.</b> Peste o treime din primării au sub 1.000 de locuitori — pragul minim de funcționalitate estimat econometric — iar veniturile proprii acoperă, în medie, doar 23% din bugetele locale. Pragul de 3.000 de locuitori anunțat de Guvern este justificat statistic, dar analiza arată că performanța locală depinde mai mult de factori fiscali decât de dimensiune.</span>
+            <span class="en" lang="en"><b>Amalgamation alone will not fix this.</b> Over a third of municipalities have fewer than 1,000 residents — the econometric threshold of basic viability — and own revenues cover, on average, just 23% of local budgets. The Government's 3,000-resident threshold is statistically justified, but the analysis shows local performance depends more on fiscal factors than on size.</span>
+          </p>
+          <ul class="measures">
+            <li><span class="ro">Comasarea prioritară a primăriilor aflate sub pragul critic de funcționalitate, evitând amalgamarea mecanică sau excesivă, care nu aduce beneficii certe.</span><span class="en" lang="en">Merge first the municipalities below the critical viability threshold, avoiding mechanical or excessive amalgamation, which brings no clear gains.</span></li>
+            <li><span class="ro">Aprofundarea descentralizării fiscale: performanța primăriilor crește odată cu impozitele colectate per capita și scade odată cu dependența de transferurile de la bugetul de stat.</span><span class="en" lang="en">Deepen fiscal decentralisation: municipal performance rises with per-capita tax collection and falls with dependence on state budget transfers.</span></li>
+            <li><span class="ro">Transferul deciziilor de investiții locale către APL, pe criterii transparente stabilite la nivel local, pentru a reduce clientelismul politic și a corela banii cu nevoile reale.</span><span class="en" lang="en">Move local investment decisions to local authorities under transparent, locally set criteria, cutting political clientelism and matching money to real needs.</span></li>
+            <li><span class="ro">Consolidarea capacităților administrative și optimizarea cheltuielilor de personal la nivel local.</span><span class="en" lang="en">Build administrative capacity and streamline staffing costs at local level.</span></li>
+          </ul>
+          <div class="impact">
+            <span class="impact-label"><span class="ro">Efect așteptat</span><span class="en" lang="en">Expected effect</span></span>
+            <span><span class="ro">Primării autonome fiscal, motivate să-și crească economia locală în loc să aștepte transferuri de la centru.</span><span class="en" lang="en">Fiscally autonomous municipalities with an incentive to grow their local economy rather than wait for transfers from the centre.</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- P5 -->
+    <div class="acc-item reveal">
+      <button type="button" class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+        <span class="p-num">5</span>
+        <span class="p-titles">
+          <span class="p-title"><span class="ro">Exporturi competitive, deficit comercial mai mic</span><span class="en" lang="en">Competitive exports, a smaller trade deficit</span></span>
+          <span class="p-tag"><span class="ro">Exporturile de bunuri și servicii: −12,2% în 2024</span><span class="en" lang="en">Goods and services exports: −12.2% in 2024</span></span>
+        </span>
+        <span class="chev" aria-hidden="true"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5 6 6.5 11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-body">
+          <p class="p-lead">
+            <span class="ro"><b>Unele politici recente au adâncit problema în loc s-o rezolve.</b> Licențierea importurilor de cereale și oleaginoase a redus la jumătate exporturile de ulei de floarea-soarelui și a înrăutățit balanța comercială cu 168 de milioane USD doar în 2024. Între timp, la fiecare euro de bunuri exportate revin trei euro importate.</span>
+            <span class="en" lang="en"><b>Some recent policies deepened the problem instead of solving it.</b> Licensing grain and oilseed imports halved sunflower oil exports and worsened the trade balance by USD 168 million in 2024 alone. Meanwhile, three euros of goods are imported for every euro exported.</span>
+          </p>
+          <ul class="measures">
+            <li><span class="ro">Instrumente de garantare pentru exportatori și credite cu componentă de grant pentru proiectele care extind capacitățile de producție.</span><span class="en" lang="en">Guarantee instruments for exporters and grant-linked credit for projects that expand production capacity.</span></li>
+            <li><span class="ro">Liberalizarea transportului de mărfuri și pasageri cu UE; pe termen scurt, cel puțin dublarea autorizațiilor multilaterale CEMT.</span><span class="en" lang="en">Liberalise freight and passenger transport with the EU; in the short run, at least double the multilateral CEMT permits.</span></li>
+            <li><span class="ro">Investiții în infrastructura calității: laboratoare acreditate, certificare și supravegherea pieței conform standardelor UE, pentru accesul real al producătorilor pe piețele externe.</span><span class="en" lang="en">Invest in quality infrastructure: accredited laboratories, certification and market surveillance to EU standards, giving producers real access to foreign markets.</span></li>
+            <li><span class="ro">Cotă TVA unică „de la furcă la furculiță” pe lanțul agroalimentar și renunțarea la licențierea importurilor de cereale.</span><span class="en" lang="en">A single "farm to fork" VAT rate along the agri-food chain and an end to grain import licensing.</span></li>
+            <li><span class="ro">Programe de stat orientate spre valoare adăugată: stimulente diferențiate pentru culturile cu valoare adăugată ridicată și rezistente la secetă, extinderea finanțării pentru achiziția de materie primă în sectoarele cu VAB înalt și susținerea micilor producători din industria prelucrătoare.</span><span class="en" lang="en">State programmes geared to value added: differentiated incentives for high value-added, drought-resistant crops, wider financing for raw material purchases in high value-added sectors, and support for small-scale manufacturers.</span></li>
+            <li><span class="ro">Prioritizarea investițiilor străine directe care aduc transfer de tehnologie și cresc sofisticarea bunurilor fabricate.</span><span class="en" lang="en">Prioritise foreign direct investment that transfers technology and raises the sophistication of manufactured goods.</span></li>
+          </ul>
+          <div class="impact">
+            <span class="impact-label"><span class="ro">Efect așteptat</span><span class="en" lang="en">Expected effect</span></span>
+            <span><span class="ro">Reducerea deficitului comercial și de cont curent prin exporturi cu valoare adăugată, nu prin restricții.</span><span class="en" lang="en">A narrower trade and current account deficit through value-added exports, not restrictions.</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- P6 -->
+    <div class="acc-item reveal">
+      <button type="button" class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+        <span class="p-num">6</span>
+        <span class="p-titles">
+          <span class="p-title"><span class="ro">Capital uman: salarii, competențe, participare</span><span class="en" lang="en">Human capital: wages, skills, participation</span></span>
+          <span class="p-tag"><span class="ro">Salariul minim: 36% din salariul mediu, față de ținta UE de 50%</span><span class="en" lang="en">Minimum wage: 36% of the average, against the 50% EU benchmark</span></span>
+        </span>
+        <span class="chev" aria-hidden="true"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5 6 6.5 11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-body">
+          <p class="p-lead">
+            <span class="ro"><b>Fără oameni calificați și motivați, restul agendei rămâne pe hârtie.</b> Salariul minim de 5.500 de lei reprezintă doar 36% din salariul mediu, față de reperul de 50% din Directiva UE privind salariile minime adecvate (circa 7.735 de lei). Totodată, 61% din populația aptă de muncă are un nivel educațional scăzut, iar sub 2% dintre adulții de peste 24 de ani își continuă studiile.</span>
+            <span class="en" lang="en"><b>Without skilled, motivated people, the rest of the agenda stays on paper.</b> The minimum wage of MDL 5,500 is just 36% of the average wage, against the 50% benchmark of the EU adequate minimum wages Directive (roughly MDL 7,735). Meanwhile, 61% of the working-age population has low educational attainment and under 2% of adults over 24 continue studying.</span>
+          </p>
+          <ul class="measures">
+            <li><span class="ro">Majorarea graduală a salariului minim spre 50% din salariul mediu brut, conform Directivei (UE) 2022/2041: concurența trebuie câștigată prin productivitate, nu prin salarii în plic.</span><span class="en" lang="en">Gradually raise the minimum wage towards 50% of the gross average wage, in line with Directive (EU) 2022/2041: competition should be won on productivity, not envelope wages.</span></li>
+            <li><span class="ro">Aprobarea mecanismului automatizat de subvenționare a creșterilor salariale, pentru formalizarea muncii sub-declarate.</span><span class="en" lang="en">Adopt the automated wage-growth subsidy mechanism to formalise under-declared work.</span></li>
+            <li><span class="ro">Creșe publice și grupe cu program prelungit obligatorii în școlile primare din toate localitățile, plus subvenționarea creșelor private acolo unde cele publice lipsesc; 5.000 de locuri de creșă sunt deja prevăzute prin Planul de creștere.</span><span class="en" lang="en">Public nurseries and compulsory extended-day groups in primary schools across all localities, plus subsidised private nursery places where public ones are missing; 5,000 nursery places are already planned under the Growth Plan.</span></li>
+            <li><span class="ro">Deductibilitatea fiscală a cheltuielilor proprii de instruire și extinderea învățământului dual, corelat cu nevoile economiei locale.</span><span class="en" lang="en">Tax deductibility of self-funded training and wider dual education, matched to local economic needs.</span></li>
+            <li><span class="ro">Finanțare majorată pentru programele de recalificare și perfecționare a șomerilor și lucrătorilor, pentru adaptarea la schimbările economice și tehnologice.</span><span class="en" lang="en">More funding for retraining and upskilling programmes for the unemployed and for workers, easing adaptation to economic and technological change.</span></li>
+            <li><span class="ro">Politici de ocupare activă bine țintite — femei, tineri, diasporă, refugiați și populația din mediul rural — inclusiv prin stimularea mobilității forței de muncă.</span><span class="en" lang="en">Well-targeted active employment policies — for women, young people, the diaspora, refugees and the rural population — including by encouraging labour mobility.</span></li>
+            <li><span class="ro">Dezvoltarea serviciilor formale de îngrijire a vârstnicilor, pentru a debloca participarea femeilor pe piața muncii.</span><span class="en" lang="en">Develop formal elderly-care services to unlock women's participation in the labour market.</span></li>
+          </ul>
+          <div class="impact">
+            <span class="impact-label"><span class="ro">Efect așteptat</span><span class="en" lang="en">Expected effect</span></span>
+            <span><span class="ro">Muncă formală, mai bine plătită și accesibilă părinților și persoanelor cu obligații de îngrijire.</span><span class="en" lang="en">Formal, better-paid work that parents and carers can actually take up.</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- P7 -->
+    <div class="acc-item reveal">
+      <button type="button" class="acc-head" aria-expanded="false" onclick="toggleAcc(this)">
+        <span class="p-num">7</span>
+        <span class="p-titles">
+          <span class="p-title"><span class="ro">Reforma proprietății publice și a întreprinderilor de stat</span><span class="en" lang="en">Reforming public property and state-owned enterprises</span></span>
+          <span class="p-tag"><span class="ro">Doar 13 din 69 de acțiuni ale Strategiei, realizate integral</span><span class="en" lang="en">Only 13 of the Strategy&#8217;s 69 actions fully delivered</span></span>
+        </span>
+        <span class="chev" aria-hidden="true"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5 6 6.5 11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-body">
+          <p class="p-lead">
+            <span class="ro"><b>Statul revine în economie, dar nu prin performanța companiilor sale.</b> Ponderea proprietății de stat în PIB a urcat de la 9,3% în 2019 la 15,4% în 2024, însă contribuția directă a companiilor de stat la valoarea adăugată rămâne de doar 2,5–3% din PIB. Evaluarea intermediară a Strategiei privind administrarea proprietății de stat 2023–2030 arată o reformă bine fundamentată, dar insuficient implementată: doar 13 din 69 de acțiuni au fost realizate integral până la finele lui 2025, iar nicio privatizare nu a fost finalizată în această perioadă.</span>
+            <span class="en" lang="en"><b>The state is returning to the economy, but not through the performance of its companies.</b> State property rose from 9.3% of GDP in 2019 to 15.4% in 2024, yet the direct contribution of state companies to value added remains just 2.5–3% of GDP. The mid-term evaluation of the 2023–2030 State Property Administration Strategy shows a well-designed but under-implemented reform: only 13 of 69 actions were fully delivered by end-2025, and not a single privatisation was completed over the period.</span>
+          </p>
+          <ul class="measures">
+            <li><span class="ro">Accelerarea raționalizării portofoliului: 225 de entități cu capital de stat la mijlocul lui 2025, față de ținta de 185 pentru 2027 — doar 8 din cele 48 de reduceri necesare au fost realizate, aproape exclusiv prin lichidări și reorganizări.</span><span class="en" lang="en">Speed up portfolio rationalisation: 225 state-owned entities in mid-2025 against the 185 target for 2027 — only 8 of the 48 required reductions have happened, almost all through liquidations and reorganisations.</span></li>
+            <li><span class="ro">Relansarea privatizărilor, inclusiv prin bursă, și restructurarea sau lichidarea entităților neviabile: peste o treime din portofoliu se află în stare nefuncțională sau problematică.</span><span class="en" lang="en">Restart privatisations, including through the stock exchange, and restructure or wind up non-viable entities: over a third of the portfolio is non-functional or in distress.</span></li>
+            <li><span class="ro">Guvernanță corporativă profesionistă în întreprinderile de stat: în 2024, 42,5% dintre ele au raportat pierderi (dublu față de 2023), iar rentabilitatea agregată a capitalului a fost practic nulă, față de +6,0% în societățile comerciale cu capital de stat.</span><span class="en" lang="en">Professional corporate governance in state enterprises: in 2024, 42.5% reported losses (double the 2023 share) and aggregate return on equity was close to nil, against +6.0% in state-owned joint-stock companies.</span></li>
+            <li><span class="ro">Finalizarea restanțelor din Strategie: modificările cadrului normativ și digitalizarea registrelor patrimoniului public, unde se concentrează majoritatea acțiunilor întârziate.</span><span class="en" lang="en">Clear the Strategy&#8217;s backlog: normative changes and the digitalisation of public property registers, where most delayed actions sit.</span></li>
+            <li><span class="ro">Măsurarea succesului prin rezultate, nu prin instrumente: mai puține entități neviabile, riscuri fiscale reduse și valoare economică generată de companiile menținute în portofoliul statului.</span><span class="en" lang="en">Measure success by results, not instruments: fewer non-viable entities, lower fiscal risks and economic value generated by the companies the state keeps.</span></li>
+          </ul>
+          <div class="impact">
+            <span class="impact-label"><span class="ro">Efect așteptat</span><span class="en" lang="en">Expected effect</span></span>
+            <span><span class="ro">Vărsămintele companiilor de stat la buget au crescut deja de la circa 100 la 691 de milioane de lei între 2021 și 2025; un portofoliu raționalizat și bine guvernat poate multiplica această contribuție și reduce riscurile fiscale.</span><span class="en" lang="en">State companies&#8217; payments to the budget already rose from around MDL 100 million to 691 million between 2021 and 2025; a rationalised, well-governed portfolio can multiply this contribution and cut fiscal risks.</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= 4. GOVERNANCE ================= -->
+<section id="guvernanta" style="padding-top:6px">
+  <div class="wrap">
+    <div class="gov reveal">
+      <div class="gov-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7v2h16V7l-8-4Zm-7 8v6m4-6v6m6-6v6m4-6v6M3 19h18v2H3v-2Z" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="gov-body">
+        <h3><span class="ro">Condiția transversală: buna guvernanță</span><span class="en" lang="en">The cross-cutting condition: good governance</span></h3>
+        <p>
+          <span class="ro">Niciuna dintre cele șapte priorități nu livrează rezultate fără depolitizarea programelor prin care statul alocă bani în economie, separarea funcțiilor de finanțare, implementare și evaluare, trecerea de la criterii de conformitate la criterii de impact, consultarea timpurie a mediului de afaceri la transpunerea acquis-ului UE și consolidarea echipelor de negociere cu Uniunea Europeană.</span>
+          <span class="en" lang="en">None of the seven priorities will deliver without depoliticising the programmes through which the state puts money into the economy, separating the financing, implementation and evaluation functions, moving from compliance-based to impact-based criteria, consulting business early on EU acquis transposition, and strengthening the teams negotiating with the European Union.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. RESULTS ================= -->
+<section id="rezultate" style="background:var(--card);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-num"><span class="ro">04 · Orizontul 2030</span><span class="en" lang="en">04 · Horizon 2030</span></div>
+      <h2><span class="ro">Efectele scontate</span><span class="en" lang="en">The expected effects</span></h2>
+    </div>
+    <div class="results">
+      <div class="res reveal">
+        <b><span class="ro">Deficit bugetar de 2–3% din PIB</span><span class="en" lang="en">Budget deficit at 2–3% of GDP</span></b>
+        <span><span class="ro">finanțe publice sustenabile și presiune mai mică pe dobânzi</span><span class="en" lang="en">sustainable public finances and less pressure on interest rates</span></span>
+      </div>
+      <div class="res reveal">
+        <b><span class="ro">+2–4 p.p. din PIB venituri publice</span><span class="en" lang="en">+2–4 p.p. of GDP in public revenue</span></b>
+        <span><span class="ro">colectate în 4–5 ani, fără cote de impozitare majorate</span><span class="en" lang="en">collected over 4–5 years, with no higher tax rates</span></span>
+      </div>
+      <div class="res reveal">
+        <b><span class="ro">Credit mai accesibil pentru firme</span><span class="en" lang="en">More accessible credit for firms</span></b>
+        <span><span class="ro">statul concurează mai puțin pentru lichiditățile băncilor, iar BNM poate reduce sterilizările</span><span class="en" lang="en">the state competes less for bank liquidity and the central bank can scale back sterilisation</span></span>
+      </div>
+      <div class="res reveal">
+        <b><span class="ro">Creștere potențială mai înaltă</span><span class="en" lang="en">Higher potential growth</span></b>
+        <span><span class="ro">susținută de investiții publice cu efect de multiplicare și de capital privat pe termen lung</span><span class="en" lang="en">driven by high-multiplier public investment and long-term private capital</span></span>
+      </div>
+      <div class="res reveal">
+        <b><span class="ro">Convergență mai rapidă cu UE</span><span class="en" lang="en">Faster convergence with the EU</span></b>
+        <span><span class="ro">PIB-ul per capita a urcat de la 24,7% la 31,3% din media ECE în 2021–2024; ritmul poate fi accelerat</span><span class="en" lang="en">GDP per capita rose from 24.7% to 31.3% of the CEE average over 2021–2024; the pace can pick up</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap foot-in">
+    <div>
+      <div class="foot-logo">
+        <span class="foot-logo-plate"><img class="js-logo" alt="Expert-Grup — Centru Analitic Independent"></span>
+      </div>
+      <p class="foot-about">
+        <span class="ro">Expert-Grup este un centru analitic independent specializat în cercetări economice și analize de politici publice, care promovează dezvoltarea economică durabilă a Republicii Moldova.</span>
+        <span class="en" lang="en">Expert-Grup is an independent think-tank specialising in economic research and public policy analysis, working for the sustainable economic development of the Republic of Moldova.</span>
+      </p>
+    </div>
+    <div class="foot-src">
+      <h4><span class="ro">Publicațiile din spatele acestui infografic</span><span class="en" lang="en">The publications behind this infographic</span></h4>
+      <ol>
+        <li><b>Moldova trebuie să înceapă o amplă reformă de consolidare fiscală</b> — <span class="ro">analiză, mai 2026</span><span class="en" lang="en">analysis, May 2026</span></li>
+        <li><b>Reforma teritorial-administrativă trebuie corelată cu o reformă amplă a descentralizării fiscale</b> — <span class="ro">comentariu economic, 2026</span><span class="en" lang="en">economic commentary, 2026</span></li>
+        <li><b>Fondurile de investiții – o precondiție de bază pentru accelerarea creșterii economice</b> — <span class="ro">comentariu economic, mai 2025</span><span class="en" lang="en">economic commentary, May 2025</span></li>
+        <li><b>Moldova trebuie să tranziteze spre un nou model de creștere economică, bazat pe valoare adăugată sporită</b> — <span class="ro">notă de poziție</span><span class="en" lang="en">position note</span></li>
+        <li><b>Raport de Stare a Țării 2025</b> — <span class="ro">Expert-Grup și Friedrich-Ebert-Stiftung, noiembrie 2025</span><span class="en" lang="en">Expert-Grup and Friedrich-Ebert-Stiftung, November 2025</span></li>
+        <li><b><a href="https://adrianlupusor-cmyk.github.io/Monitorizarea-strategiei-proprietatii-publice/" target="_blank" rel="noopener">Monitorizarea Strategiei privind administrarea proprietății de stat 2023–2030</a></b> — <span class="ro">raport de monitorizare și evaluare, aprilie 2026</span><span class="en" lang="en">monitoring and evaluation report, April 2026</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 <span class="ro">Centrul Analitic Independent „Expert-Grup”</span><span class="en" lang="en">Independent Think-Tank Expert-Grup</span></span>
+    <a href="https://www.expert-grup.org" target="_blank" rel="noopener">www.expert-grup.org</a>
+  </div>
+</footer>
+
+<script>
+/* ---------- language toggle ---------- */
+var TITLES = {
+  ro: 'Priorități economice pentru viitorul Guvern | Expert-Grup',
+  en: 'Economic priorities for the next Government | Expert-Grup'
+};
+function setLang(l){
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  document.title = TITLES[l];
+  document.getElementById('btn-ro').classList.toggle('on', l==='ro');
+  document.getElementById('btn-en').classList.toggle('on', l==='en');
+  document.querySelectorAll('.acc-item.open .acc-panel').forEach(function(p){
+    p.style.maxHeight = p.scrollHeight + 'px';
+  });
+  try{ localStorage.setItem('eg-lang', l); }catch(e){}
+}
+try{
+  var saved = localStorage.getItem('eg-lang');
+  if(saved==='en') setLang('en');
+}catch(e){}
+
+/* ---------- accordion ---------- */
+function toggleAcc(head){
+  var item = head.parentElement;
+  var panel = item.querySelector('.acc-panel');
+  var open = item.classList.toggle('open');
+  head.setAttribute('aria-expanded', open ? 'true' : 'false');
+  panel.style.maxHeight = open ? panel.scrollHeight + 'px' : '0px';
+  if(open) setTimeout(function(){ animateIn(panel); }, 120);
+}
+var allOpen = false;
+function toggleAll(){
+  allOpen = !allOpen;
+  document.querySelectorAll('.acc-item').forEach(function(item){
+    var head = item.querySelector('.acc-head');
+    var panel = item.querySelector('.acc-panel');
+    item.classList.toggle('open', allOpen);
+    head.setAttribute('aria-expanded', allOpen ? 'true' : 'false');
+    panel.style.maxHeight = allOpen ? panel.scrollHeight + 'px' : '0px';
+    if(allOpen) animateIn(panel);
+  });
+  document.getElementById('lbl-all-ro').textContent = allOpen ? 'Închide toate' : 'Deschide toate';
+  document.getElementById('lbl-all-en').textContent = allOpen ? 'Collapse all' : 'Expand all';
+}
+window.addEventListener('resize', function(){
+  document.querySelectorAll('.acc-item.open .acc-panel').forEach(function(p){
+    p.style.maxHeight = p.scrollHeight + 'px';
+  });
+});
+window.addEventListener('beforeprint', function(){
+  document.querySelectorAll('.acc-item').forEach(function(item){
+    item.classList.add('open');
+    item.querySelector('.acc-panel').style.maxHeight = 'none';
+  });
+  document.querySelectorAll('.bar i').forEach(function(b){ b.style.width = b.dataset.w + '%'; });
+});
+
+/* ---------- reveal + counters + bars ---------- */
+function animateCount(el){
+  if(el.dataset.done) return;
+  el.dataset.done = '1';
+  var val = parseFloat(el.dataset.val), dec = parseInt(el.dataset.dec||'0',10);
+  var sep = el.dataset.sep || ','; var t0 = null, DUR = 1100;
+  function frame(t){
+    if(!t0) t0 = t;
+    var k = Math.min((t - t0)/DUR, 1);
+    k = 1 - Math.pow(1 - k, 3);
+    el.textContent = (val * k).toFixed(dec).replace('.', sep);
+    if(k < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+function animateIn(scope){
+  scope.querySelectorAll('.bar i').forEach(function(b){ b.style.width = b.dataset.w + '%'; });
+  scope.querySelectorAll('.count').forEach(animateCount);
+}
+if('IntersectionObserver' in window){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        en.target.classList.add('in');
+        animateIn(en.target);
+        io.unobserve(en.target);
+      }
+    });
+  }, {threshold: 0.18});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+}else{
+  document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); animateIn(el); });
+}
+
+/* ---------- logo propagation ---------- */
+(function(){
+  var l = document.getElementById('eg-logo');
+  if(!l) return;
+  document.querySelectorAll('img.js-logo').forEach(function(i){ i.src = l.src; });
+  var f = document.createElement('link');
+  f.rel = 'icon'; f.href = l.src;
+  document.head.appendChild(f);
+})();
+</script>
+</body>
+</html>
